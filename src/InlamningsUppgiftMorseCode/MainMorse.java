@@ -14,7 +14,8 @@ public class MainMorse {
 
         Logic newInput = new Logic();
         String translateInput = "";
-        while(!translateInput.equals("EXIT") && newInput.validInput) {
+        while(!translateInput.equals("EXIT")) {
+            System.out.println("");
             translateInput = scan.nextLine().toUpperCase();
             if (translateInput.isBlank() || translateInput == null) {
                 System.out.println("Could not translate, please try again");

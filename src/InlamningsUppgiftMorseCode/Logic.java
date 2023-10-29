@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class Logic {
-    public boolean validInput = true;
-
     public HashMap<String, String> toMorse() {
         //int MorseSize;
         HashMap<String, String> toMorseCodeTranslator = new HashMap<String, String>();
@@ -114,7 +112,7 @@ public class Logic {
 
         if(checkValue.matches("^[0-9A-Z\\s?]+$")) {
             newSplit = checkValue.split("\\s");
-            validInput = true;
+
             //System.out.println(Arrays.toString(newSplit));
             LoopInput(newSplit,morseCode);
 
@@ -132,11 +130,10 @@ public class Logic {
                 //System.out.println(tempPart.length);
                 //System.out.println("Has ; " + tempPart[i]);
                 newSplit=tempPart[i].split("\\s+");
-
                 //System.out.println("Test:" + Arrays.toString(newSplit));
                 //System.out.println("Test:" + newSplit.length);
                 LoopInput(newSplit,morseCode);
-                validInput = true;
+
 
             }
 
@@ -145,7 +142,6 @@ public class Logic {
 
         }else {
             System.out.println("Could not translate, please try again");
-            validInput = false;
         }
 
 
