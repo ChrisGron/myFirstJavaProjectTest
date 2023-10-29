@@ -46,10 +46,6 @@ public class Logic {
         toMorseCodeTranslator.put(".", "*-*-*-");
         toMorseCodeTranslator.put(",", "--**--");
         toMorseCodeTranslator.put("?", "**--**");
-
-        //MorseSize = morseCodeTranslator.size();
-        //Borde kanske använda entrySet() och entry.getKey()
-        //return morseCodeTranslator.get(key);
         return toMorseCodeTranslator;
 
     }
@@ -96,10 +92,6 @@ public class Logic {
         fromMorseCodeTranslator.put("*-*-*-", ".");
         fromMorseCodeTranslator.put("--**--", ",");
         fromMorseCodeTranslator.put("**--**", "?");
-
-        //MorseSize = morseCodeTranslator.size();
-        //Borde kanske använda entrySet() och entry.getKey()
-        //return morseCodeTranslator.get(key);
         return fromMorseCodeTranslator;
 
     }
@@ -110,17 +102,10 @@ public class Logic {
 
         boolean morseCode = false;
 
-        if(checkValue.matches("^[0-9A-Z\\s?]+$")) {
+        if(checkValue.matches("^[0-9A-Z\\s?.,]+$")) {
             newSplit = checkValue.split("\\s");
-
             //System.out.println(Arrays.toString(newSplit));
             LoopInput(newSplit,morseCode);
-
-
-
-
-
-
         }else if(checkValue.matches("^[-*\\s;]+$")) {
             morseCode = true;
             tempPart = checkValue.split(";");
@@ -136,15 +121,9 @@ public class Logic {
 
 
             }
-
-            //System.out.println(Arrays.toString(tempPart));
-            //LoopInput(tempPart,morseCode);
-
         }else {
             System.out.println("Could not translate, please try again");
         }
-
-
 
     }
     public void LoopInput (String[] splitInput,boolean morseCode){
