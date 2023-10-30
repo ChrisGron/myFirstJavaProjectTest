@@ -14,6 +14,7 @@ public class MainMorse {
 
         Logic newInput = new Logic();
         String translateInput = "";
+        System.out.print("Please enter text or morse code:");
         while(!translateInput.equals("EXIT")) {
             System.out.println("");
             translateInput = scan.nextLine().toUpperCase();

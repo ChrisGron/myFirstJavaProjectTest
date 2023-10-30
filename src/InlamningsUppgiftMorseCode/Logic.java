@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class Logic {
     public HashMap<String, String> toMorse() {
         //int MorseSize;
-        HashMap<String, String> toMorseCodeTranslator = new HashMap<String, String>();
+        HashMap<String, String> toMorseCodeTranslator = new HashMap<String, String>(); //abcd EFghijk lmnopQrstuvw xyz 0123456789 .,?
         toMorseCodeTranslator.put("A", "*-");
         toMorseCodeTranslator.put("B", "-***");
         toMorseCodeTranslator.put("C", "-*-*");
@@ -53,7 +53,7 @@ public class Logic {
     public HashMap<String, String> fromMorse() {
         //int MorseSize;
         HashMap<String, String> fromMorseCodeTranslator = new HashMap<String, String>();
-        fromMorseCodeTranslator.put("*-", "A"); //**** * *---; - * *** -; **--- ---** ----- **--**
+        fromMorseCodeTranslator.put("*-", "A"); //**** * *---;- * *** -; **--- ---** ; ----- **--**
         fromMorseCodeTranslator.put("-***", "B");
         fromMorseCodeTranslator.put("-*-*", "C");
         fromMorseCodeTranslator.put("-**", "D");
@@ -138,7 +138,7 @@ public class Logic {
                 for (int b = 0; b < splitInput[i].length(); b++) {
                     //System.out.println("Is not Morse");
                     System.out.print(toMorse().get(String.valueOf(splitInput[i].charAt(b))));
-                    if(i < splitInput.length || b < splitInput.length ) {
+                    if(i < splitInput.length || b < splitInput.length-1 ) {
                         System.out.print(" ");
                     }
 
