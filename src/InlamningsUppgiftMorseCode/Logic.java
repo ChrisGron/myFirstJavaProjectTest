@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class Logic {
+    //To DO
+    //Valid morse in invalid configurations
+
     public HashMap<String, String> toMorse() {
         //int MorseSize;
         HashMap<String, String> toMorseCodeTranslator = new HashMap<String, String>(); //abcd EFghijk lmnopQrstuvw xyz 0123456789 .,?
@@ -52,8 +55,8 @@ public class Logic {
 
     public HashMap<String, String> fromMorse() {
         //int MorseSize;
-        HashMap<String, String> fromMorseCodeTranslator = new HashMap<String, String>();
-        fromMorseCodeTranslator.put("*-", "A"); //**** * *---;- * *** -; **--- ---** ; ----- **--**
+        HashMap<String, String> fromMorseCodeTranslator = new HashMap<String, String>();//**** * *---;- * *** -; **--- ---** ; ----- **--**
+        fromMorseCodeTranslator.put("*-", "A");
         fromMorseCodeTranslator.put("-***", "B");
         fromMorseCodeTranslator.put("-*-*", "C");
         fromMorseCodeTranslator.put("-**", "D");
@@ -127,6 +130,8 @@ public class Logic {
 
     }
     public void LoopInput (String[] splitInput,boolean morseCode){
+        //TO DO
+        //Handle extra space
 
         for (int i = 0; i < splitInput.length; i++) {
 

@@ -16,7 +16,7 @@ public class MainMorse {
         String translateInput = "";
         System.out.print("Please enter text or morse code:");
         while(!translateInput.equals("EXIT")) {
-            System.out.println("");
+            System.out.println();
             translateInput = scan.nextLine().toUpperCase();
             if (translateInput.isBlank() || translateInput == null) {
                 System.out.println("Could not translate, please try again");
